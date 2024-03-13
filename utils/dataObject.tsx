@@ -1,4 +1,5 @@
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+const screenWidth = Math.round(Dimensions.get("window").width);
 
 export const Slide = ({ item }: any) => {
     return (
@@ -15,49 +16,6 @@ export const Slide = ({ item }: any) => {
         </View>
     );
 };
-
-const screenWidth = Math.round(Dimensions.get("window").width);
-const screenHeight = Math.round(Dimensions.get("window").height);
-
-export const COLORS = { primary: '#282534', white: '#fff' };
-export const styles = StyleSheet.create({
-    subtitle: {
-        color: COLORS.white,
-        fontSize: 13,
-        marginTop: 10,
-        maxWidth: '70%',
-        textAlign: 'center',
-        lineHeight: 23,
-    },
-    title: {
-        color: COLORS.white,
-        fontSize: 22,
-        fontWeight: 'bold',
-        marginTop: 20,
-        textAlign: 'center',
-    },
-    image: {
-        height: '100%',
-        width: '100%',
-        resizeMode: 'contain',
-    },
-    indicator: {
-        height: 8,
-        width: 18,
-        backgroundColor: '#24BAEC',
-        marginHorizontal: 3,
-        borderRadius: 5,
-
-    },
-    btn: {
-        flex: 1,
-        height: 50,
-        borderRadius: 5,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
 
 
 export const slidesAsset = [
@@ -84,3 +42,16 @@ export const slidesAsset = [
     },
 
 ];
+
+export const COLORS = { primary: '#282534', white: '#fff' };
+export const styles = StyleSheet.create({
+    indicator: {
+        height: 8,
+        width: 18,
+        backgroundColor: '#24BAEC',
+        marginHorizontal: 3,
+        borderRadius: 5,
+
+    },
+});
+
