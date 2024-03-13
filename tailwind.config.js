@@ -10,6 +10,11 @@ module.exports = {
       textColors: {
         primary: '#24BAEC'
       },
+      fontFamily: {
+        Geometric: ['Geometric', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
+        Gil: ['Gil', 'sans-serif'],
+      }
     },
   },
   plugins: [],
