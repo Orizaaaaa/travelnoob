@@ -2,15 +2,15 @@ import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 
 export const Slide = ({ item }: any) => {
     return (
-        <View style={{ alignItems: 'center' }}>
+        <View className='flex-1  items-center justify-start' style={{ width: screenWidth }} >
             <Image source={item?.image}
                 style={{ width: screenWidth }}
                 resizeMode="cover"
-                className="h-full"
+                className="h-96 rounded-b-[30px]"
             />
-            <View>
-                <Text style={styles.title}>{item?.title}</Text>
-                <Text style={styles.subtitle}>{item?.subtitle}</Text>
+            <View className="py-6 px-6 space-y-6 " >
+                <Text className="font-Geometric text-4xl text-black text-center">{item?.title}{item?.textHero}</Text>
+                <Text className="text-gray-600 font-Gil text-xl text-center py-6" >{item?.subtitle}</Text>
             </View>
         </View>
     );
@@ -63,8 +63,9 @@ export const slidesAsset = [
     {
         id: '1',
         image: require('../assets/images/onboard1.png'),
-        title: 'Best Digital Solution',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: `Life is short and the world is `,
+        textHero: <Text className="text-4xl font-Geometric underline text-orange-500" >wide</Text>,
+        subtitle: 'At friens tours and travel, we customize realible and truthworthy educational tours to destinations all over the world. ',
     },
     {
         id: '2',

@@ -74,10 +74,9 @@ const OnboardScreen = ({ navigation }: any) => {
                 <View className='mb-5'>
                     {currentSlideIndex == slidesAsset.length - 1 ? (
                         <View className='h-12'>
-                            <TouchableOpacity
-                                style={styles.btn}
+                            <TouchableOpacity className='bg-primary  flex justify-center items-center flex-1 h-12 rounded-md'
                                 onPress={() => navigation.replace('home')}>
-                                <Text className='font-bold '>
+                                <Text className='font-bold text-white'>
                                     GET STARTED
                                 </Text>
                             </TouchableOpacity>
@@ -86,21 +85,21 @@ const OnboardScreen = ({ navigation }: any) => {
 
                         <View className='flex-row ' >
 
-                            <TouchableOpacity className='color-white flex-1 justify-center items-center h-12 border-2 rounded-md border-white background-transparent '
+                            <TouchableOpacity className='color-white flex-1 justify-center items-center h-12 border-2 rounded-md border-primary background-transparent '
                                 activeOpacity={0.8}
                                 onPress={skip}>
-                                <Text className='font-bold text-white'>
+                                <Text className='font-bold text-black'>
                                     SKIP
                                 </Text>
                             </TouchableOpacity>
 
                             <View style={{ width: 15 }} />
 
-                            <TouchableOpacity className='color-white flex justify-center items-center flex-1 h-12 rounded-md bg-white'
+                            <TouchableOpacity className=' flex justify-center items-center flex-1 h-12 rounded-md bg-primary'
                                 activeOpacity={0.8}
                                 onPress={goToNextSlide}
                             >
-                                <Text className='font-bold '>
+                                <Text className='font-bold color-white '>
                                     NEXT
                                 </Text>
                             </TouchableOpacity>
@@ -112,19 +111,23 @@ const OnboardScreen = ({ navigation }: any) => {
     };
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
+        <SafeAreaView className='flex-1 bg-white' >
             <StatusBar backgroundColor={COLORS.primary} />
-            <FlatList
-                ref={ref}
-                onMomentumScrollEnd={updateCurrentSlideIndex}
-                contentContainerStyle={{ height: height * 0.75 }}
-                showsHorizontalScrollIndicator={false}
-                horizontal
-                data={slidesAsset}
-                pagingEnabled
-                renderItem={({ item }) => <Slide item={item} />}
-            />
+            <View className='flex-1 items-center justify-start' >
+                <FlatList
+                    ref={ref}
+                    onMomentumScrollEnd={updateCurrentSlideIndex}
+                    contentContainerStyle={{ height: height * 0.75 }}
+                    showsHorizontalScrollIndicator={false}
+                    horizontal
+                    data={slidesAsset}
+                    pagingEnabled
+                    renderItem={({ item }) => <Slide item={item} />}
+                />
+
+            </View>
             <Footer />
+
         </SafeAreaView>
     );
 };

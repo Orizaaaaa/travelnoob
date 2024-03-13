@@ -4,6 +4,7 @@ module.exports = {
     "./App.{js,jsx,ts,tsx}",
     "./screens/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
+    "./utils/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -14,8 +15,15 @@ module.exports = {
         Geometric: ['Geometric', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
         Gil: ['Gil', 'sans-serif'],
+      },
+      backgroundColor: {
+        primary: '#24BAEC'
+      },
+      borderColor: {
+        primary: '#24BAEC'
       }
     },
+
   },
   plugins: [],
 }
