@@ -42,11 +42,12 @@ export const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     indicator: {
-        height: 5,
-        width: 10,
+        height: 8,
+        width: 18,
         backgroundColor: '#24BAEC',
         marginHorizontal: 3,
-        borderRadius: 2,
+        borderRadius: 5,
+
     },
     btn: {
         flex: 1,
@@ -63,7 +64,7 @@ export const slidesAsset = [
     {
         id: '1',
         image: require('../assets/images/onboard1.png'),
-        title: `Life is short and the world is `,
+        title: 'Life is short and the world is ',
         textHero: <Text className="text-4xl font-Geometric underline text-orange-500" >wide</Text>,
         subtitle: 'At friens tours and travel, we customize realible and truthworthy educational tours to destinations all over the world. ',
     },
@@ -77,7 +78,7 @@ export const slidesAsset = [
     {
         id: '3',
         image: require('../assets/images/onboard3.png'),
-        title: 'People don`t take trips, trips take',
+        title: 'People don`t take trips, trips take ',
         textHero: <Text className="text-4xl font-Geometric underline text-orange-500" >People</Text>,
         subtitle: 'To get the best of your adventure you just need to leave and go where you like. we are waiting for you ',
     },
