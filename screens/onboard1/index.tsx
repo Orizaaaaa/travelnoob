@@ -19,7 +19,7 @@ const COLORS = { primary: '#282534', white: '#fff' };
 
 
 
-const Onboard1 = ({ navigation }: any) => {
+const OnboardScreen = ({ navigation }: any) => {
 
     const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
     const ref: any = useRef();
@@ -76,7 +76,7 @@ const Onboard1 = ({ navigation }: any) => {
                         <View className='h-12'>
                             <TouchableOpacity
                                 style={styles.btn}
-                                onPress={() => navigation.replace('HomeScreen')}>
+                                onPress={() => navigation.replace('home')}>
                                 <Text className='font-bold '>
                                     GET STARTED
                                 </Text>
@@ -130,4 +130,4 @@ const Onboard1 = ({ navigation }: any) => {
 };
 
 
-export default Onboard1;
+export default OnboardScreen;
