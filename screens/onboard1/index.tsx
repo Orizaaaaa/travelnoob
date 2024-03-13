@@ -57,7 +57,6 @@ const OnboardScreen = ({ navigation }: any) => {
                     {/* Render indicator */}
                     {slidesAsset.map((_, index) => (
                         <View key={index}
-
                             style={[
                                 styles.indicator,
                                 currentSlideIndex == index && {
