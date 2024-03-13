@@ -56,15 +56,8 @@ const OnboardScreen = ({ navigation }: any) => {
 
                     {/* Render indicator */}
                     {slidesAsset.map((_, index) => (
-                        <View key={index}
-                            style={[
-                                styles.indicator,
-                                currentSlideIndex == index && {
-                                    backgroundColor: COLORS.white,
-                                    width: 25,
-                                    height: 5,
-                                },
-                            ]}
+                        <View key={index} className='bg-primary'
+                            style={[styles.indicator, currentSlideIndex == index && { width: 25, height: 5, },]}
                         />
                     ))}
                 </View>
@@ -112,7 +105,7 @@ const OnboardScreen = ({ navigation }: any) => {
     return (
         <SafeAreaView className='flex-1 bg-white' >
             <StatusBar backgroundColor={COLORS.primary} />
-            <View className='flex-1 items-center justify-start' >
+            <View className='flex-1 items-center justify-start ' >
                 <FlatList
                     ref={ref}
                     onMomentumScrollEnd={updateCurrentSlideIndex}

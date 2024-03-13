@@ -8,7 +8,7 @@ export const Slide = ({ item }: any) => {
                 resizeMode="cover"
                 className="h-96 rounded-b-[30px]"
             />
-            <View className="py-6 px-6 space-y-6 " >
+            <View className="pt-6 px-6 space-y-6 " >
                 <Text className="font-Geometric text-4xl text-black text-center">{item?.title}{item?.textHero}</Text>
                 <Text className="text-gray-600 font-Gil text-xl text-center py-6" >{item?.subtitle}</Text>
             </View>
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     indicator: {
         height: 5,
         width: 10,
-        backgroundColor: 'grey',
+        backgroundColor: '#24BAEC',
         marginHorizontal: 3,
         borderRadius: 2,
     },
@@ -70,14 +70,16 @@ export const slidesAsset = [
     {
         id: '2',
         image: require('../assets/images/onboard2.png'),
-        title: 'Achieve Your Goals',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'It`s a big world out there go ',
+        textHero: <Text className="text-4xl font-Geometric underline text-orange-500" >explore</Text>,
+        subtitle: 'To get the best of your adventure you just need to leave and go where you like. we are waiting for you',
     },
     {
         id: '3',
         image: require('../assets/images/onboard3.png'),
-        title: 'Increase Your Value',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'People don`t take trips, trips take',
+        textHero: <Text className="text-4xl font-Geometric underline text-orange-500" >People</Text>,
+        subtitle: 'To get the best of your adventure you just need to leave and go where you like. we are waiting for you ',
     },
 
 ];
