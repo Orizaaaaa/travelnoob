@@ -48,6 +48,9 @@ const SignUpScreen = () => {
 
 
     // send signUp data with firebase
+    const handleSignUp = () => {
+        navigation.navigate('home')
+    }
 
     return (
         <ScrollView className='flex-1 px-4 py-4 bg-white' >
@@ -83,7 +86,7 @@ const SignUpScreen = () => {
                 </View>
 
                 <View className='w-full flex items-end justify-end' >
-                    <ButtonPrimary className='h-14 w-full rounded-xl' >
+                    <ButtonPrimary className='h-14 w-full rounded-xl' onPress={handleSignUp} >
                         <Text className='text-lg font-medium text-white' >Sign Up</Text>
                     </ButtonPrimary>
                 </View>
