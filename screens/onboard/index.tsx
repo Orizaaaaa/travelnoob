@@ -67,7 +67,7 @@ const OnboardScreen = ({ navigation }: any) => {
                 <View className='mb-5'>
                     {currentSlideIndex == slidesAsset.length - 1 ? (
                         <View className='h-12'>
-                            <ButtonPrimary onPress={() => navigation.replace('home')} className='flex-1 h-12'>
+                            <ButtonPrimary onPress={() => navigation.replace('login')} className='flex-1 h-12'>
                                 <Text className='font-bold text-white'>
                                     GET STARTED
                                 </Text>

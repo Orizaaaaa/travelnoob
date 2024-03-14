@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/home/HomeScreen';
 import { useFonts } from 'expo-font';
 import OnboardScreen from './screens/onboard';
+import LoginScreen from './screens/login/LoginScreen';
 
 
 
@@ -24,6 +25,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="onboard" component={OnboardScreen} />
         <Stack.Screen name="home" component={HomeScreen} />
+        <Stack.Screen name="login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

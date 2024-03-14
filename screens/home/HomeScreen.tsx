@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const HomeScreen = () => {
 
     return (
-        <View className='flex-1 items-center justify-center' >
-            <Text className='text-3xl text-green-400 ' >HomeScreen</Text>
-        </View>
+        <ScrollView className='px-4 py-4 bg-white' >
+            <Text>Home</Text>
+        </ScrollView>
     )
 }
 

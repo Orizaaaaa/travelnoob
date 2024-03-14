@@ -17,10 +17,11 @@ module.exports = {
         Gil: ['Gil', 'sans-serif'],
       },
       backgroundColor: {
-        primary: '#24BAEC'
+        primary: '#24BAEC',
+        light: '#F7F7F9'
       },
       borderColor: {
-        primary: '#24BAEC'
+        primary: '#24BAEC',
       }
     },
 
