@@ -13,11 +13,10 @@ import {
 import { Slide, slidesAsset, styles } from '../../utils/dataObject';
 import ButtonPrimary from '../../components/elements/button/ButtonPrimary';
 
+
 const { width, height } = Dimensions.get('window');
 
 const COLORS = { primary: '#282534', white: '#fff' };
-
-
 
 
 const OnboardScreen = ({ navigation }: any) => {
@@ -67,11 +66,12 @@ const OnboardScreen = ({ navigation }: any) => {
                 <View className='mb-5'>
                     {currentSlideIndex == slidesAsset.length - 1 ? (
                         <View className='h-12'>
-                            <ButtonPrimary onPress={() => navigation.replace('login')} className='flex-1 h-12'>
+                            <TouchableOpacity className='bg-primary  flex justify-center items-center flex-1 h-12 rounded-md'
+                                onPress={() => navigation.replace('home')}>
                                 <Text className='font-bold text-white'>
                                     GET STARTED
                                 </Text>
-                            </ButtonPrimary>
+                            </TouchableOpacity>
                         </View>
                     ) : (
 
@@ -87,11 +87,20 @@ const OnboardScreen = ({ navigation }: any) => {
 
                             <View style={{ width: 15 }} />
 
-                            <ButtonPrimary onPress={goToNextSlide} className='flex-1 h-12'>
-                                <Text className='font-bold text-white'>
+                            <TouchableOpacity className=' flex justify-center items-center flex-1 h-12 rounded-md bg-primary'
+                                activeOpacity={0.8}
+                                onPress={goToNextSlide}
+                            >
+                                <Text className='font-bold color-white '>
                                     NEXT
                                 </Text>
-                            </ButtonPrimary>
+                            </TouchableOpacity>
+
+                            {/* <ButtonPrimary onPress={goToNextSlide} className='flex-1 h-12'>
+                                <Text className='font-bold color-white '>
+                                    NEXT
+                                </Text>
+                            </ButtonPrimary> */}
                         </View>
                     )}
                 </View>

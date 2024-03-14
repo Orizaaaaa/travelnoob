@@ -4,12 +4,12 @@ import React from 'react'
 type Props = {
     onPress: () => void
     children: React.ReactNode
-    className?: string
+    className: string
 }
 
 const ButtonPrimary = ({ onPress, children, className }: Props) => {
     return (
-        <TouchableOpacity className={`flex justify-center items-center  rounded-md bg-primary ${className}`}
+        <TouchableOpacity className={` justify-center items-center  rounded-md bg-primary  ${className}`}
             activeOpacity={0.8}
             onPress={onPress}
         >
