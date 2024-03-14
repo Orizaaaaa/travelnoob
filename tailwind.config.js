@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       textColors: {
-        primary: '#24BAEC'
+        primary: '#24BAEC',
+        secondary: '#1B1E28'
       },
       fontFamily: {
         Geometric: ['Geometric', 'sans-serif'],
@@ -22,6 +23,10 @@ module.exports = {
       },
       borderColor: {
         primary: '#24BAEC',
+      },
+      colors: {
+        primary: '#24BAEC',
+        secondary: '#1B1E28'
       }
     },
 
