@@ -1,10 +1,11 @@
-import { View, Text, ScrollView, TouchableOpacity, Button, Dimensions } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Button, Dimensions, Image, Linking } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import ButtonBack from '../../components/elements/buttonBack';
 import { useNavigation } from '@react-navigation/native';
 import UserInput from '../../components/elements/input/authInput';
 import ButtonPrimary from '../../components/elements/buttonPrimary';
+import { connection } from '../../utils/dataObject';
 
 
 const LoginScreen = () => {
@@ -80,9 +81,13 @@ const LoginScreen = () => {
                 </Text>
             </View>
 
-            <View className='flex w-full pt-5 flex-row items-center justify-center '>
-                <View className='flex-col'>
-
+            <View className='flex w-full pt-6 flex-row items-center justify-center '>
+                <View className='flex-row space-x-6'>
+                    {connection.map((items, index) => (
+                        <TouchableOpacity key={index} onPress={() => Linking.openURL(items.link)}>
+                            <Image resizeMode='contain' source={items.icon} className='w-10 h-10' />
+                        </TouchableOpacity>
+                    ))}
                 </View>
             </View>
 
