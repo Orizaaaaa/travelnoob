@@ -11,7 +11,7 @@ const HomeScreen = () => {
             <View className='px-2 flex-row justify-between items-center'>
                 <View className='flex-row items-center bg-light  p-1 rounded-full space-x-2' >
                     <View className='w-10 h-10 rounded-full bg-pink-200' >
-                        <Image className='w-10 h-10' source={require('../../assets/images/profile.png')} resizeMode='cover' />
+                        <Image className='w-10 h-10 rounded-full' source={require('../../assets/images/profile.png')} resizeMode='cover' />
                     </View>
                     <Text className=' text-lg font-semibold px-2' >Leonardo</Text>
                 </View>
