@@ -93,7 +93,7 @@ const SignUpScreen = () => {
             <View className='flex w-full pt-10 flex-row items-center justify-center space-x-2' >
                 <Text className='text-gray-500 font-Inter' > Already have an accoun?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate("login")}>
-                    <Text className='text-orange-500 font-semibold ' >Sign Up</Text>
+                    <Text className='text-orange-500 font-semibold ' >Sign in</Text>
                 </TouchableOpacity>
             </View>
 
