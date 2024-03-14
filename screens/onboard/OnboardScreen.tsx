@@ -11,7 +11,7 @@ import {
     Dimensions,
 } from 'react-native';
 import { Slide, slidesAsset, styles } from '../../utils/dataObject';
-import ButtonPrimary from '../../components/elements/button';
+import ButtonPrimary from '../../components/elements/button/ButtonPrimary';
 
 const { width, height } = Dimensions.get('window');
 
