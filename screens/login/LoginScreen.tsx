@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
-import ButtonBack from '../../components/elements/button/ButtonBack';
+import ButtonBack from '../../components/elements/buttonBack/ButtonBack';
 
 const LoginScreen = () => {
     return (

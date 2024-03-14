@@ -11,7 +11,7 @@ import {
     Dimensions,
 } from 'react-native';
 import { Slide, slidesAsset, styles } from '../../utils/dataObject';
-import ButtonPrimary from '../../components/elements/button/ButtonPrimary';
+import ButtonPrimary from '../../components/elements/buttonPrimary';
 
 
 const { width, height } = Dimensions.get('window');
@@ -66,15 +66,13 @@ const OnboardScreen = ({ navigation }: any) => {
                 <View className='mb-5'>
                     {currentSlideIndex == slidesAsset.length - 1 ? (
                         <View className='h-12'>
-                            <TouchableOpacity className='bg-primary  flex justify-center items-center flex-1 h-12 rounded-md'
-                                onPress={() => navigation.replace('home')}>
+                            <ButtonPrimary onPress={() => navigation.replace('login')} className='flex-1 h-12' >
                                 <Text className='font-bold text-white'>
                                     GET STARTED
                                 </Text>
-                            </TouchableOpacity>
+                            </ButtonPrimary>
                         </View>
                     ) : (
-
                         <View className='flex-row ' >
 
                             <TouchableOpacity className='color-white flex-1 justify-center items-center h-12 border-2 rounded-md border-primary background-transparent '
@@ -87,20 +85,11 @@ const OnboardScreen = ({ navigation }: any) => {
 
                             <View style={{ width: 15 }} />
 
-                            <TouchableOpacity className=' flex justify-center items-center flex-1 h-12 rounded-md bg-primary'
-                                activeOpacity={0.8}
-                                onPress={goToNextSlide}
-                            >
+                            <ButtonPrimary onPress={goToNextSlide} className='flex-1 h-12'>
                                 <Text className='font-bold color-white '>
                                     NEXT
                                 </Text>
-                            </TouchableOpacity>
-
-                            {/* <ButtonPrimary onPress={goToNextSlide} className='flex-1 h-12'>
-                                <Text className='font-bold color-white '>
-                                    NEXT
-                                </Text>
-                            </ButtonPrimary> */}
+                            </ButtonPrimary>
                         </View>
                     )}
                 </View>
