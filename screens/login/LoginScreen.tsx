@@ -61,7 +61,7 @@ const LoginScreen = () => {
                 </View>
 
                 <View className='w-full flex items-end justify-end' >
-                    <ButtonPrimary className='h-14 w-full' >
+                    <ButtonPrimary className='h-14 w-full rounded-xl' >
                         <Text className='text-lg font-medium text-white' >Sign In</Text>
                     </ButtonPrimary>
                 </View>
