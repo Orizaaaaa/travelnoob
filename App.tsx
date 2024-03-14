@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/home/HomeScreen';
 import { useFonts } from 'expo-font';
-import OnboardScreen from './screens/onboard';
+import OnboardScreen from './screens/onboard/OnboardScreen';
 import LoginScreen from './screens/login/LoginScreen';
 
 
