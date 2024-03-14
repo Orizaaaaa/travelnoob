@@ -5,6 +5,7 @@ import HomeScreen from './screens/home/HomeScreen';
 import { useFonts } from 'expo-font';
 import OnboardScreen from './screens/onboard/OnboardScreen';
 import LoginScreen from './screens/login/LoginScreen';
+import SignUpScreen from './screens/signUp/SignUpScreen';
 
 
 
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen name="onboard" component={OnboardScreen} />
         <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
+        <Stack.Screen name="signup" component={SignUpScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
