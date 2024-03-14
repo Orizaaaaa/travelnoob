@@ -33,7 +33,7 @@ const LoginScreen = () => {
     const [alert, setAlert] = useState(false)
 
     return (
-        <ScrollView className='px-4 py-4 bg-white' >
+        <ScrollView className='px-4 py-4 flex-1 bg-white' >
             <ButtonBack />
 
             <View className='py-14' >
