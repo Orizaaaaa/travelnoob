@@ -10,7 +10,7 @@ import {
     TouchableOpacity,
     Dimensions,
 } from 'react-native';
-import { Slide, slidesAsset, styles } from '../../utils/dataObject';
+import { Slide, slidesAsset, styles } from '../../utils/onboardObject';
 import ButtonPrimary from '../../components/elements/buttonPrimary';
 
 
