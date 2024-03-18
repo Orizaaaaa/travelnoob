@@ -15,8 +15,6 @@ const Stack = createNativeStackNavigator();
 
 const MainTabScreen = () => (
   <Tab.Navigator screenOptions={{ headerShown: false }}>
-    <Tab.Screen name="login" component={LoginScreen} />
-    <Tab.Screen name="signup" component={SignUpScreen} />
     <Tab.Screen name="home" component={HomeScreen} />
   </Tab.Navigator>
 );
@@ -35,6 +33,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="onboard" component={OnboardScreen} />
+        <Tab.Screen name="login" component={LoginScreen} />
+        <Tab.Screen name="signup" component={SignUpScreen} />
         <Stack.Screen name="MainScreen" component={MainTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>

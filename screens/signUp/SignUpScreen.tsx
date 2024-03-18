@@ -49,7 +49,7 @@ const SignUpScreen = () => {
 
     // send signUp data with firebase
     const handleSignUp = () => {
-        navigation.navigate('home')
+        navigation.navigate('MainScreen')
     }
 
     return (
@@ -115,7 +115,6 @@ const SignUpScreen = () => {
                     ))}
                 </View>
             </View>
-
 
         </ScrollView>
     )
