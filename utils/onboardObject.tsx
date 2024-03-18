@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     indicator: {
         height: 8,
         width: 18,
-        backgroundColor: '#24BAEC',
+        backgroundColor: '#CAEAFF',
         marginHorizontal: 3,
         borderRadius: 5,
 

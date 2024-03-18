@@ -57,7 +57,7 @@ const OnboardScreen = ({ navigation }: any) => {
                     {/* Render indicator */}
                     {slidesAsset.map((_, index) => (
                         <View key={index} className='bg-primary'
-                            style={[styles.indicator, currentSlideIndex == index && { width: 34, height: 8, },]}
+                            style={[styles.indicator, currentSlideIndex == index && { width: 34, height: 8, backgroundColor: '#24BAEC' },]}
                         />
                     ))}
                 </View>
