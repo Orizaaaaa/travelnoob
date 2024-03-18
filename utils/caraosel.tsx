@@ -1,28 +1,32 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 const screenWidth = Math.round(Dimensions.get("window").width);
 import { FontAwesome } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 
 
-export const Slide = ({ item }: any) => {
+export const Slide = ({ item, onPress }: any) => {
     return (
+
         <View className='flex-1  items-center justify-start m-4 rounded-[20px] p-3 ' style={styles.container}  >
-            <Image source={item?.image}
-                resizeMode="cover"
-                className="h-80 w-64 rounded-[20px] "
-            />
-            <View className="flex-row items-center justify-between w-full mt-3" >
-                <Text className="text-lg" >Niladri Reservoir</Text>
-                <View className="flex-row items-center space-x-1" >
-                    <FontAwesome name="star" size={24} color="#FFD336" />
-                    <Text className="text-lg font-Inter" >4.7</Text>
+            <TouchableOpacity onPress={onPress}>
+                <Image source={item?.image}
+                    resizeMode="cover"
+                    className="h-80 w-64 rounded-[20px] "
+                />
+                <View className="flex-row items-center justify-between w-full mt-3" >
+                    <Text className="text-lg" >Niladri Reservoirr</Text>
+                    <View className="flex-row items-center space-x-1" >
+                        <FontAwesome name="star" size={24} color="#FFD336" />
+                        <Text className="text-lg font-Inter" >4.7</Text>
+                    </View>
                 </View>
-            </View>
-            <View className="flex-row items-center justify-start w-full mt-2" >
-                <EvilIcons name="location" size={20} color="black" />
-                <Text className="font-Inter text-gray-500" >Lembang, Kab Band..</Text>
-            </View>
+                <View className="flex-row items-center justify-start w-full mt-2" >
+                    <EvilIcons name="location" size={20} color="black" />
+                    <Text className="font-Inter text-gray-500" >Lembang, Kab Band..</Text>
+                </View>
+            </TouchableOpacity>
         </View>
+
     );
 };
 

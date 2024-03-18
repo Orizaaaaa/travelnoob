@@ -12,10 +12,8 @@ const { width, height } = Dimensions.get('window');
 const COLORS = { primary: '#282534', white: '#fff' };
 const HomeScreen = () => {
     const ref: any = useRef();
-
-
     return (
-        <ScrollView className='flex-1 py-4 bg-white' >
+        <ScrollView className='flex-1 pt-4 bg-white ' style={{ height: height }} >
 
             {/* profile and notif */}
             <View className='px-2 flex-row justify-between items-center'>
@@ -76,7 +74,19 @@ const HomeScreen = () => {
                 </View>
             </SafeAreaView>
 
-
+            {/* <View className='relative bottom-0 flex-1 bg-red-900 h-40 ' style={{ width: width }} >
+                <View className='absolute bottom-0 flex-row  justify-evenly items-center ' >
+                    <TouchableOpacity>
+                        <Text>klik 1</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text>klik 2</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text>klik 3</Text>
+                    </TouchableOpacity>
+                </View>
+            </View> */}
         </ScrollView>
 
     )
