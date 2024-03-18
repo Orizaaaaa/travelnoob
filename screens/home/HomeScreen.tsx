@@ -5,7 +5,6 @@ import { Octicons } from '@expo/vector-icons';
 import { Slide } from '../../utils/caraosel';
 import { slidesAsset } from '../../utils/caraosel';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { StatusBar } from 'expo-status-bar';
 
 
 const { width, height } = Dimensions.get('window');

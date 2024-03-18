@@ -1,13 +1,22 @@
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 const screenWidth = Math.round(Dimensions.get("window").width);
+import { FontAwesome } from '@expo/vector-icons';
+
 
 export const Slide = ({ item }: any) => {
     return (
-        <View className='flex-1  items-center justify-start m-4 ' >
+        <View className='flex-1  items-center justify-start m-4 rounded-[20px] p-3 ' style={styles.container}  >
             <Image source={item?.image}
                 resizeMode="cover"
                 className="h-96 w-72 rounded-[20px] "
             />
+            <View className="flex-row items-center justify-between w-full mt-3" >
+                <Text className="text-lg" >Niladri Reservoir</Text>
+                <View className="flex-row items-center space-x-1" >
+                    <FontAwesome name="star" size={24} color="#FFD336" />
+                    <Text className="text-lg font-Inter" >4.7</Text>
+                </View>
+            </View>
         </View>
     );
 };
@@ -38,5 +47,20 @@ export const slidesAsset = [
 
 ];
 
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5, // hanya berlaku untuk platform Android
+    },
+
+});
 
 
