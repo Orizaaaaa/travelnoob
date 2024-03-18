@@ -1,10 +1,19 @@
-import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
-import React from 'react'
-import ButtonBack from '../../components/elements/buttonBack'
+import { View, Text, ScrollView, TouchableOpacity, Image, Dimensions, FlatList } from 'react-native'
+import React, { useRef } from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
+import { Slide } from '../../utils/caraosel';
+import { slidesAsset } from '../../utils/caraosel';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
 
+
+const { width, height } = Dimensions.get('window');
+
+const COLORS = { primary: '#282534', white: '#fff' };
 const HomeScreen = () => {
+    const ref: any = useRef();
+
 
     return (
         <ScrollView className='flex-1 py-4 bg-white' >
@@ -55,6 +64,18 @@ const HomeScreen = () => {
                 </TouchableOpacity>
             </View>
 
+            <SafeAreaView style={{ flex: 1 }}>
+                <View style={{ flex: 1 }}>
+                    <FlatList
+                        data={slidesAsset}
+                        horizontal
+                        pagingEnabled
+                        showsHorizontalScrollIndicator={false}
+                        keyExtractor={(item) => item.id}
+                        renderItem={({ item }) => <Slide item={item} />}
+                    />
+                </View>
+            </SafeAreaView>
 
 
         </ScrollView>
