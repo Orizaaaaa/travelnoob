@@ -19,29 +19,33 @@ const MainTabScreen = () => (
     tabBarIcon: ({ focused, color, size }) => {
       let iconName;
 
-      if (route.name === 'home') {
-        iconName = focused
-          ? 'ios-information-circle'
-          : 'ios-information-circle-outline';
-      } else if (route.name === 'Settings') {
-        iconName = focused ? 'ios-list' : 'ios-list-outline';
+      if (route.name === 'Home') {
+        return <Ionicons name={'logo-ionic'} size={30} color={color} />;
+      } else if (route.name === 'login') {
+        return <Ionicons name={'log-in-outline'} size={30} color={color} />;
+      } else if (route.name === 'signup') {
+        return <Ionicons name={'person-add-outline'} size={30} color={color} />;
       }
 
-      // You can return any component that you like here!
-      return <Ionicons name={'home'} size={size} color={color} />;
     },
+
     tabBarActiveTintColor: '#24BAEC',
     tabBarInactiveTintColor: 'gray',
     headerShown: false,
     tabBarStyle: {
       backgroundColor: '#FFFFFF',
       elevation: 0,
+      height: 60,
     }
+  })
+  } >
 
-  })} >
-
-    <Tab.Screen name="home" component={HomeScreen} />
-  </Tab.Navigator>
+    <Tab.Screen name="Home" component={HomeScreen} />
+    <Tab.Screen name="login" component={LoginScreen} options={{
+      tabBarLabel: '',
+    }} />
+    <Tab.Screen name="signup" component={SignUpScreen} />
+  </Tab.Navigator >
 );
 
 export default function App() {
