@@ -13,6 +13,7 @@ import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import MapScreen from './screens/map/MapScreen';
+import DetailPlaceScreen from './screens/detailPlace/DetailPlaceScreen';
 
 
 
@@ -87,6 +88,7 @@ export default function App() {
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="signup" component={SignUpScreen} />
         <Stack.Screen name="map" component={MapScreen} />
+        <Stack.Screen name="detailPlace" component={DetailPlaceScreen} />
         <Stack.Screen name="MainScreen" component={MainTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>

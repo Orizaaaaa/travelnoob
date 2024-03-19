@@ -75,6 +75,7 @@ const HomeScreen = () => {
                     />
                 </View>
             </SafeAreaView>
+            <Button title='seemap' onPress={() => navigation.navigate('detailPlace')} />
         </ScrollView>
 
 
