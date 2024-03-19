@@ -73,20 +73,6 @@ const HomeScreen = () => {
                     />
                 </View>
             </SafeAreaView>
-
-            {/* <View className='relative bottom-0 flex-1 bg-red-900 h-40 ' style={{ width: width }} >
-                <View className='absolute bottom-0 flex-row  justify-evenly items-center ' >
-                    <TouchableOpacity>
-                        <Text>klik 1</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text>klik 2</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text>klik 3</Text>
-                    </TouchableOpacity>
-                </View>
-            </View> */}
         </ScrollView>
 
     )

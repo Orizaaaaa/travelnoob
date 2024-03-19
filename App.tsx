@@ -7,6 +7,7 @@ import OnboardScreen from './screens/onboard/OnboardScreen';
 import LoginScreen from './screens/login/LoginScreen';
 import SignUpScreen from './screens/signUp/SignUpScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -14,7 +15,31 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const MainTabScreen = () => (
-  <Tab.Navigator screenOptions={{ headerShown: false }}>
+  <Tab.Navigator screenOptions={({ route }) => ({
+    tabBarIcon: ({ focused, color, size }) => {
+      let iconName;
+
+      if (route.name === 'home') {
+        iconName = focused
+          ? 'ios-information-circle'
+          : 'ios-information-circle-outline';
+      } else if (route.name === 'Settings') {
+        iconName = focused ? 'ios-list' : 'ios-list-outline';
+      }
+
+      // You can return any component that you like here!
+      return <Ionicons name={'home'} size={size} color={color} />;
+    },
+    tabBarActiveTintColor: '#24BAEC',
+    tabBarInactiveTintColor: 'gray',
+    headerShown: false,
+    tabBarStyle: {
+      backgroundColor: '#FFFFFF',
+      elevation: 0,
+    }
+
+  })} >
+
     <Tab.Screen name="home" component={HomeScreen} />
   </Tab.Navigator>
 );
