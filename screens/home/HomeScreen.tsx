@@ -1,10 +1,11 @@
-import { View, Text, ScrollView, TouchableOpacity, Image, Dimensions, FlatList } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Image, Dimensions, FlatList, Button } from 'react-native'
 import React, { useRef } from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { Slide } from '../../utils/caraosel';
 import { slidesAsset } from '../../utils/caraosel';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 
 
 const { width, height } = Dimensions.get('window');
@@ -12,6 +13,7 @@ const { width, height } = Dimensions.get('window');
 const COLORS = { primary: '#282534', white: '#fff' };
 const HomeScreen = () => {
     const ref: any = useRef();
+    const navigation: any = useNavigation()
     return (
         <ScrollView className='flex-1 pt-4 bg-white ' style={{ height: height }} >
 
@@ -73,7 +75,9 @@ const HomeScreen = () => {
                     />
                 </View>
             </SafeAreaView>
+            <Button title='seemap' onPress={() => navigation.navigate('map')} />
         </ScrollView>
+
 
     )
 }

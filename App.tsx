@@ -12,6 +12,7 @@ import { Text, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import MapScreen from './screens/map/MapScreen';
 
 
 
@@ -83,8 +84,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="onboard" component={OnboardScreen} />
-        <Tab.Screen name="login" component={LoginScreen} />
-        <Tab.Screen name="signup" component={SignUpScreen} />
+        <Stack.Screen name="login" component={LoginScreen} />
+        <Stack.Screen name="signup" component={SignUpScreen} />
+        <Stack.Screen name="map" component={MapScreen} />
         <Stack.Screen name="MainScreen" component={MainTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -92,27 +94,4 @@ export default function App() {
 }
 
 
-const profileScreen = () => {
-  return (
-    <View>
-      <Text>Profile</Text>
-    </View>
-  )
-}
-
-const messagesScreen = () => {
-  return (
-    <View>
-      <Text>Profile</Text>
-    </View>
-  )
-}
-
-const calendarScreen = () => {
-  return (
-    <View>
-      <Text>Profile</Text>
-    </View>
-  )
-}
 
