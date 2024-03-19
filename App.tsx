@@ -54,7 +54,7 @@ const MainTabScreen = () => (
 
     <Tab.Screen name="Home" component={HomeScreen} />
     {/* home */}
-    {/* calendar */}
+    {/* calendar atau booking */}
     {/* login */}
     {/* message */}
     {/* profile */}
