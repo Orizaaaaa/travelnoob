@@ -53,12 +53,17 @@ const MainTabScreen = () => (
   } >
 
     <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Calendar" component={calendarScreen} />
+    {/* home */}
+    {/* calendar */}
+    {/* login */}
+    {/* message */}
+    {/* profile */}
+    {/* <Tab.Screen name="Calendar" component={calendarScreen} />
     <Tab.Screen name="login" component={LoginScreen} options={{
       tabBarLabel: '',
     }} />
     <Tab.Screen name="Message" component={messagesScreen} />
-    <Tab.Screen name="Profile" component={profileScreen} />
+    <Tab.Screen name="Profile" component={profileScreen} /> */}
 
 
   </Tab.Navigator >
