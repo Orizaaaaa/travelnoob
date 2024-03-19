@@ -7,7 +7,11 @@ import OnboardScreen from './screens/onboard/OnboardScreen';
 import LoginScreen from './screens/login/LoginScreen';
 import SignUpScreen from './screens/signUp/SignUpScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 
@@ -20,11 +24,19 @@ const MainTabScreen = () => (
       let iconName;
 
       if (route.name === 'Home') {
-        return <Ionicons name={'logo-ionic'} size={30} color={color} />;
+        return <AntDesign name="home" size={30} color={color} />
       } else if (route.name === 'login') {
-        return <Ionicons name={'log-in-outline'} size={30} color={color} />;
-      } else if (route.name === 'signup') {
-        return <Ionicons name={'person-add-outline'} size={30} color={color} />;
+        return (
+          <View className='bg-primary p-4 rounded-full absolute bottom-4 border-2 border-gray-200' >
+            <Feather name="search" size={25} color={'white'} />
+          </View>
+        )
+      } else if (route.name === 'Profile') {
+        return <FontAwesome name="user-o" size={30} color={color} />
+      } else if (route.name === 'Message') {
+        return <Ionicons name="chatbubble-ellipses-outline" size={30} color={color} />
+      } else if (route.name === 'Calendar') {
+        return <Ionicons name="calendar-outline" size={30} color={color} />
       }
 
     },
@@ -41,10 +53,14 @@ const MainTabScreen = () => (
   } >
 
     <Tab.Screen name="Home" component={HomeScreen} />
+    <Tab.Screen name="Calendar" component={calendarScreen} />
     <Tab.Screen name="login" component={LoginScreen} options={{
       tabBarLabel: '',
     }} />
-    <Tab.Screen name="signup" component={SignUpScreen} />
+    <Tab.Screen name="Message" component={messagesScreen} />
+    <Tab.Screen name="Profile" component={profileScreen} />
+
+
   </Tab.Navigator >
 );
 
@@ -69,3 +85,29 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
+const profileScreen = () => {
+  return (
+    <View>
+      <Text>Profile</Text>
+    </View>
+  )
+}
+
+const messagesScreen = () => {
+  return (
+    <View>
+      <Text>Profile</Text>
+    </View>
+  )
+}
+
+const calendarScreen = () => {
+  return (
+    <View>
+      <Text>Profile</Text>
+    </View>
+  )
+}
+
