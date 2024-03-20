@@ -71,11 +71,10 @@ const HomeScreen = () => {
                         pagingEnabled
                         showsHorizontalScrollIndicator={false}
                         keyExtractor={(item) => item.id}
-                        renderItem={({ item }) => <Slide item={item} />}
+                        renderItem={({ item }) => <Slide item={item} onPress={() => navigation.navigate('detailPlace')} />}
                     />
                 </View>
             </SafeAreaView>
-            <Button title='seemap' onPress={() => navigation.navigate('detailPlace')} />
         </ScrollView>
 
 
