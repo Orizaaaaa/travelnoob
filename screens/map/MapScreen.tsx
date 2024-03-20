@@ -15,6 +15,8 @@ export default function MapScreen() {
         longitude: -122.4324,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
+        title: 'Niladri',
+        desc: 'Tempat Rekreasi'
     };
 
     return (
@@ -49,8 +51,8 @@ export default function MapScreen() {
             <MapView className='w-full h-full' initialRegion={initialRegion}>
                 <Marker
                     coordinate={{ latitude: initialRegion.latitude, longitude: initialRegion.longitude }}
-                    title={"Pusat Peta"}
-                    description={"Ini adalah lokasi pusat peta"}
+                    title={initialRegion.title}
+                    description={initialRegion.desc}
                 />
             </MapView >
 
