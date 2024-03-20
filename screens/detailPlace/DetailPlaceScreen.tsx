@@ -88,7 +88,7 @@ const DetailPlaceScreen = ({ navigation }: any) => {
                             Book Now
                         </Text>
                     </ButtonPrimary>
-                    <ButtonSecondary className='w-full h-12 rounded-xl' >
+                    <ButtonSecondary className='w-full h-12 rounded-xl' onPress={() => navigation.navigate('map')} >
                         <Text className='text-lg font-medium text-primary '>
                             See On The Map
                         </Text>
