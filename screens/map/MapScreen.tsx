@@ -11,8 +11,8 @@ import ButtonSecondary from '../../components/elements/ButtonSecondary';
 
 export default function MapScreen() {
     const initialRegion = {
-        latitude: 37.78825,
-        longitude: -122.4324,
+        latitude: -6.902481,
+        longitude: 107.618813,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
         title: 'Niladri',
