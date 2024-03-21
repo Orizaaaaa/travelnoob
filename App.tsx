@@ -14,6 +14,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import MapScreen from './screens/map/MapScreen';
 import DetailPlaceScreen from './screens/detailPlace/DetailPlaceScreen';
+import AllPlaces from './screens/allPlaces/AllPlaces';
 
 
 
@@ -89,6 +90,7 @@ export default function App() {
         <Stack.Screen name="signup" component={SignUpScreen} />
         <Stack.Screen name="map" component={MapScreen} />
         <Stack.Screen name="detailPlace" component={DetailPlaceScreen} />
+        <Stack.Screen name="allPlaces" component={AllPlaces} />
         <Stack.Screen name="MainScreen" component={MainTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>

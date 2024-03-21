@@ -58,7 +58,7 @@ const HomeScreen = () => {
             {/* caraosel */}
             <View className='flex flex-row justify-between items-center px-4 mt-4' >
                 <Text className='text-lg font-semibold' >Best Destination </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('allPlaces')}>
                     <Text className='text-lg text-orange-500' >View All</Text>
                 </TouchableOpacity>
             </View>
